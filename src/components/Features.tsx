@@ -1,32 +1,32 @@
 
-import { Activity, HeartPulse, BrainCircuit } from "lucide-react";
+import { CalendarClock, MonitorCheck, UserRoundCheck } from "lucide-react";
 
 export function Features() {
   return (
     <section className="py-16 px-4 bg-gradient-to-b from-white to-blue-50">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Como a IA está revolucionando a saúde
+          Automatize sua Clínica com IA
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              icon: Activity,
-              title: "Monitoramento em Tempo Real",
+              icon: CalendarClock,
+              title: "Agendamento Automático",
               description:
-                "Acompanhamento contínuo dos pacientes com alertas instantâneos"
+                "Assistentes que organizam sua agenda e gerenciam remarcações inteligentemente"
             },
             {
-              icon: HeartPulse,
-              title: "Diagnóstico Preciso",
+              icon: MonitorCheck,
+              title: "Análise de Prontuários",
               description:
-                "Análise avançada de exames e histórico médico"
+                "IA que processa históricos médicos e sugere correlações relevantes"
             },
             {
-              icon: BrainCircuit,
-              title: "Tratamento Personalizado",
+              icon: UserRoundCheck,
+              title: "Acompanhamento Contínuo",
               description:
-                "Recomendações adaptadas ao perfil de cada paciente"
+                "Monitoramento automatizado de pacientes com alertas personalizados"
             }
           ].map((feature) => (
             <div
