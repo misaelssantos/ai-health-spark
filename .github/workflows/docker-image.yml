@@ -7,13 +7,25 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ai-health-spark:$(date +%s)
+      - uses: actions/checkout@v4
 
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      - name: Set up image tag
+        id: vars
+        run: echo "IMAGE_TAG=ai-health-spark:$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
+
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag ${{ env.IMAGE_TAG }}
+
+      - name: Tag the image for Docker Hub
+        run: docker tag ${{ env.IMAGE_TAG }} ${{ secrets.DOCKER_USERNAME }}/ai-health-spark:latest
+
+      - name: Push image to Docker Hub
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/ai-health-spark:latest
