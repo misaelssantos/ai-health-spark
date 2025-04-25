@@ -29,3 +29,6 @@ jobs:
 
       - name: Push image to Docker Hub
         run: docker push ${{ secrets.DOCKER_USERNAME }}/ai-health-spark:latest
+
+      - name: Publicar na Hostinger com Easypanel
+        run: curl http://82.25.71.20:3000/api/deploy/55584d93d9ba329f8990b74522a58fa4e7bab313677b8c61
