@@ -1,5 +1,5 @@
 
-import { Brain, Robot, Stethoscope } from "lucide-react";
+import { Bot, Brain, Stethoscope } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
@@ -24,7 +24,7 @@ export function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           {[
             {
-              icon: Robot,
+              icon: Bot,
               title: "Atendimento 24/7",
               description: "Assistentes virtuais que gerenciam agendamentos e dúvidas dos pacientes"
             },
@@ -50,3 +50,5 @@ export function Hero() {
     </section>
   );
 }
+
+export default Hero;
