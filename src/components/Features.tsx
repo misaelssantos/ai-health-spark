@@ -3,9 +3,9 @@ import { CalendarClock, MonitorCheck, UserRoundCheck } from "lucide-react";
 
 export function Features() {
   return (
-    <section className="py-16 px-4 bg-gradient-to-b from-white to-blue-50">
+    <section className="py-16 px-4 bg-gradient-custom">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
           Automatize sua Clínica com IA
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -31,15 +31,15 @@ export function Features() {
           ].map((feature) => (
             <div
               key={feature.title}
-              className="relative p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow"
+              className="glass-card relative p-6 rounded-2xl transition-all duration-300 hover:bg-white/10"
             >
               <div className="absolute -top-6 left-6">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                   <feature.icon className="w-6 h-6 text-primary" />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold mt-6 mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-white">{feature.title}</h3>
+              <p className="text-blue-100/70">{feature.description}</p>
             </div>
           ))}
         </div>
