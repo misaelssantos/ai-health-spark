@@ -17,7 +17,7 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-blue-100/70">
                 <Mail className="w-4 h-4" />
-                <span>misael@gmail.com</span>
+                <span>semidoc.ia@gmail.com</span>
               </div>
               <div className="flex items-center gap-2 text-blue-100/70">
                 <Phone className="w-4 h-4" />
@@ -36,7 +36,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-white/5 mt-12 pt-8 text-center text-blue-100/60">
-          <p>&copy; 2025 AI Health Spark. Todos os direitos reservados.</p>
+          <p>&copy; 2025 SemiDoc IA. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
