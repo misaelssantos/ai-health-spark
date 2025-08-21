@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-2">
-            <h3 className="font-semibold text-xl mb-4 gradient-text">AI Health Spark</h3>
+            <h3 className="font-semibold text-xl mb-4 gradient-text">SemiDoc IA</h3>
             <p className="text-blue-100/70 max-w-md">
               Revolucionando o setor de saúde com soluções inteligentes e tecnologia de ponta para um atendimento mais eficiente e humanizado.
             </p>
